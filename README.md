@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 # Sleep-Based Training Readiness and Recovery Recommendation System
 
+Check out the live application here: 
+[Live Deployment - Sleep Readiness System](https://sleep-readiness-system.netlify.app/)
 **MSc Research Project: Operationalizing Sleep Quality Analysis for Amateur Powerlifters**
 
 A production-ready, full-stack web application that translates empirical research into a real-time decision-support system for training readiness assessment.
