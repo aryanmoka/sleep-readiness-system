@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sleep-Based Training Readiness and Recovery Recommendation System
 
 **MSc Research Project: Operationalizing Sleep Quality Analysis for Amateur Powerlifters**
@@ -531,3 +532,7 @@ For questions regarding this implementation or the underlying research, please c
 ---
 
 **Built with academic rigor and industry standards for MSc evaluation and practical deployment.**
+=======
+# sleep-readiness-system
+Full-stack decision-support system developed as part of an MSc research project investigating the influence of sleep quality on training readiness and recovery in amateur powerlifters.
+>>>>>>> 80c703ff8e360b419acc1a1d18ad97f87b270aeb
