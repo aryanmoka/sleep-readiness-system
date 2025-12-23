@@ -1,6 +1,6 @@
 import { TrainingInput, TrainingOutput } from '../types';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 export class ApiError extends Error {
   constructor(message: string, public statusCode?: number) {
@@ -27,20 +27,13 @@ export async function predictReadiness(input: TrainingInput): Promise<TrainingOu
       );
     }
 
-    const data: TrainingOutput = await response.json();
-    return data;
+    return await response.json();
   } catch (error) {
-    if (error instanceof ApiError) {
-      throw error;
-    }
+    if (error instanceof ApiError) throw error;
 
-    if (error instanceof TypeError && error.message.includes('fetch')) {
-      throw new ApiError(
-        'Unable to connect to the API server. Please ensure the backend is running on ' + API_BASE_URL
-      );
-    }
-
-    throw new ApiError('An unexpected error occurred while calculating readiness');
+    throw new ApiError(
+      `Unable to connect to the API server. Backend URL: ${API_BASE_URL}`
+    );
   }
 }
 
